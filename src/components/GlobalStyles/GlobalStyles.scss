@@ -1,6 +1,8 @@
 :root {
     --primary: #05c3ff;
     --text-color: #000;
+    --width-layout: 1140px;
+    --header-height: 135px;
 }
 
 * {
@@ -14,7 +16,19 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    font-size: 1.6rem;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+@font-face {
+    font-family: 'FontTitle';
+    src: url('/assets/fonts/josefinsans-bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'FontSolid';
+    src: url('/assets/fonts/fa-solid-900.woff2');
+    font-weight: 700;
 }

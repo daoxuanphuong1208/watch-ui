@@ -1,0 +1,43 @@
+.wrapper {
+    --height-inner-top: 90px;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: var(--header-height);
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    width: var(--width-layout);
+    height: 100%;
+}
+
+.inner-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--height-inner-top);
+}
+
+.hotline {
+    .phone {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+.logo {
+}
+
+.action-list {
+    .action-item {
+    }
+}
+
+.menu-list {
+    height: var(--header-height - --height-inner-top);
+    .menu-item {
+    }
+}
