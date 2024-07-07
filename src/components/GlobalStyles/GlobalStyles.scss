@@ -4,8 +4,6 @@
     --primary: #05c3ff;
     --text-color: #000;
     --width-layout: 1140px;
-    --header-height: 135px;
-    --spacer-item: 16px;
 }
 
 * {
@@ -19,8 +17,9 @@ html {
 }
 
 body {
-    font-family: 'Mulish', sans-serif;
-    font-size: 1.6rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 1.4rem;
     color: var(--text-color);
 }
 
@@ -32,6 +31,10 @@ button {
 
 button {
     background-color: transparent;
+}
+
+ul {
+    list-style-type: none;
 }
 
 @font-face {
