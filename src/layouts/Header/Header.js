@@ -1,6 +1,9 @@
 import classNames from 'classnames/bind';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './Header.module.scss';
+import images from '../../assets/images';
 const cx = classNames.bind(styles);
 
 function Header() {
@@ -9,12 +12,28 @@ function Header() {
             <div className={cx('inner')}>
                 <div className={cx('inner-top')}>
                     <div className={cx('hotline')}>
-                        Hotline <span className={cx('phone')}>09XXXXXX</span>
+                        Hotline <span className={cx('phone')}>0375802813</span>
                     </div>
-                    <img className={cx('logo')} src="" alt="" />
+                    <img width="145" height="75" className={cx('logo')} src={images.logo} alt="logo" />
                     <div className={cx('action-list')}>
-                        <div className={cx('action-item')}>Tìm kiếm</div>
-                        <div className={cx('action-item')}>Giỏ hàng</div>
+                        <div className={cx('action-item')}>
+                            <span className={cx('icon')}>
+                                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            </span>
+                            Tìm kiếm
+                            <div className={cx('search')}>
+                                <input type="text" placeholder="Tìm sản phẩm..." />
+                                <button>
+                                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                                </button>
+                            </div>
+                        </div>
+                        <div className={cx('action-item')}>
+                            <span className={cx('icon')}>
+                                <FontAwesomeIcon icon={faCartShopping} />
+                            </span>
+                            Giỏ hàng
+                        </div>
                     </div>
                 </div>
                 {/* <ul className={cx('menu-list')}>
