@@ -1,10 +1,6 @@
 import config from '../config';
 import HeaderOnly from '../layouts/HeaderOnly';
-import Home from '../pages/Home';
-import Product from '../pages/Product';
-import News from '../pages/News';
-import Contact from '../pages/Contact';
-import Cart from '../pages/Cart';
+import { Home, Product, News, Contact, Cart } from '../pages';
 // public routes
 const publicRoutes = [
     {
