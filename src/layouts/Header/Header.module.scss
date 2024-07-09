@@ -5,72 +5,38 @@
 
 .inner {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     width: var(--width-layout);
 }
 
-.top {
+.inner-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    background-color: antiquewhite;
 }
 
-.phone {
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.logo {
-    margin-top: 10px;
-    margin-left: 74px;
+.action-item {
+    font-weight: 500;
+    font-size: 1.5rem;
+    &:hover {
+        color: red;
+    }
 }
 
 .action {
     display: flex;
     gap: 12px;
-
-    li {
-        position: relative;
-    }
-
-    li ~ li::before {
-        position: absolute;
-        content: '';
-        width: 1px;
-        height: 15px;
-        left: -6px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #8fbb43;
-    }
 }
 
 .action-item {
-    font-size: 1.5rem;
-    font-weight: 500;
-    cursor: pointer;
-
-    &:hover {
-        color: var(--primary);
-    }
+    position: relative;
 }
 
-.bottom {
-    display: flex;
-    justify-content: center;
-}
-
-.menu {
-    display: flex;
-}
-
-.menu-item {
-    padding: 0 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    &:hover {
-        color: var(--primary);
-    }
+.action-item ~ .action-item::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 15px;
+    left: -6px;
+    background-color: red;
 }

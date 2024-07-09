@@ -34,7 +34,7 @@ function Button({ to, href, onClick, children, leftIcon, rightIcon, className, .
 }
 
 Button.propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
 };
 
 export default Button;
