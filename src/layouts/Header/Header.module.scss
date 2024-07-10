@@ -143,8 +143,10 @@
     position: absolute;
     width: 200px;
     padding: 0 10px;
+    border-radius: 4px;
     top: 45px;
     left: 3px;
+    z-index: 999;
     border: 1px solid #ccc;
     background-color: var(--white);
 }

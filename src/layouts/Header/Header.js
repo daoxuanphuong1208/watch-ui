@@ -25,7 +25,11 @@ function Header() {
                         <img className={cx('logo')} src={images.logo} alt="logo" />
                     </Button>
                     <span className={cx('action')}>
-                        <Button className={cx('action-item')} leftIcon={<FontAwesomeIcon icon={faMagnifyingGlass} />}>
+                        <Button
+                            to="#"
+                            className={cx('action-item')}
+                            leftIcon={<FontAwesomeIcon icon={faMagnifyingGlass} />}
+                        >
                             Tìm kiếm
                             <div className={cx('search')}>
                                 <div className={cx('search-wrap')}>
