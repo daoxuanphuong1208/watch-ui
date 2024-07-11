@@ -13,7 +13,6 @@ const images = {
         { url: require('../images/partner-4.jpg') },
         { url: require('../images/partner-5.jpg') },
         { url: require('../images/partner-6.jpg') },
-        { url: require('../images/partner-7.jpg') },
     ],
 };
 
