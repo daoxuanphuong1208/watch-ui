@@ -1,9 +1,20 @@
 const images = {
     logo: require('../images/logo.png'),
-    slider_1: require('../images/slider-1.jpg'),
-    slider_2: require('../images/slider-2.jpg'),
-    slider_3: require('../images/slider-3.jpg'),
-    slider_4: require('../images/slider-4.jpg'),
+    banner: [
+        { url: require('../images/banner-1.jpg') },
+        { url: require('../images/banner-2.jpg') },
+        { url: require('../images/banner-3.jpg') },
+        { url: require('../images/banner-4.jpg') },
+    ],
+    partner: [
+        { url: require('../images/partner-1.jpg') },
+        { url: require('../images/partner-2.jpg') },
+        { url: require('../images/partner-3.jpg') },
+        { url: require('../images/partner-4.jpg') },
+        { url: require('../images/partner-5.jpg') },
+        { url: require('../images/partner-6.jpg') },
+        { url: require('../images/partner-7.jpg') },
+    ],
 };
 
 export default images;

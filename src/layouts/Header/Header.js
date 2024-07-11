@@ -8,6 +8,17 @@ import Button from '../../components/Button/Button';
 const cx = classNames.bind(styles);
 
 function Header() {
+    const products = [
+        {
+            id: 1,
+            name: 'Xiaomi Watch',
+        },
+        {
+            id: 2,
+            name: 'Apple Watch',
+        },
+    ];
+
     const handleSubNavItemClick = (e) => {
         e.stopPropagation();
     };
@@ -64,20 +75,18 @@ function Header() {
                         >
                             Sản phẩm
                             <div className={cx('sub-nav')}>
-                                <Button
-                                    onClick={handleSubNavItemClick}
-                                    href="https://facebook.com"
-                                    className={cx('sub-nav-item')}
-                                >
-                                    Xiaomi Watch
-                                </Button>
-                                <Button
-                                    onClick={handleSubNavItemClick}
-                                    href="https://facebook.com"
-                                    className={cx('sub-nav-item')}
-                                >
-                                    Apple Watch
-                                </Button>
+                                {products.map((product) => {
+                                    return (
+                                        <Button
+                                            key={product.id}
+                                            onClick={handleSubNavItemClick}
+                                            href="https://facebook.com"
+                                            className={cx('sub-nav-item')}
+                                        >
+                                            {product.name}
+                                        </Button>
+                                    );
+                                })}
                             </div>
                         </Button>
                         <Button className={cx('nav-item')} to="/news">

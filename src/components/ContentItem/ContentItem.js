@@ -3,17 +3,15 @@ import classNames from 'classnames/bind';
 import style from './ContentItem.module.scss';
 
 const cx = classNames.bind(style);
-function ContentItem({ content }) {
+function ContentItem({ children, title, description }) {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('title')}>
-                    <h2 className={cx('large')}>Đối tác</h2>
-                    <p className={cx('description')}>
-                        Bộ sưu tập những thương hiệu nổi tiếng về smartwatch trên thế giới
-                    </p>
+                    <h2 className={cx('large')}>{title}</h2>
+                    <p className={cx('description')}>{description}</p>
                 </div>
-                <div>{content}</div>
+                <div>{children}</div>
             </div>
         </div>
     );
