@@ -1,15 +1,14 @@
 import classNames from 'classnames/bind';
 
 import styles from './PrevArrowSlide.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import images from '../../assets/images';
 
 const cx = classNames.bind(styles);
 
 function PrevArrowSlide({ passProps, onClick }) {
     return (
         <div onClick={onClick} className={cx('wrapper')} {...passProps}>
-            <FontAwesomeIcon icon={faAngleLeft} />
+            <img src={images.arrowSlick} alt="prev" />
         </div>
     );
 }

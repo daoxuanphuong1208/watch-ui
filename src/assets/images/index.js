@@ -14,6 +14,7 @@ const images = {
         { url: require('../images/partner-5.jpg') },
         { url: require('../images/partner-6.jpg') },
     ],
+    arrowSlick: require('../images/control_slick.png'),
 };
 
 export default images;
