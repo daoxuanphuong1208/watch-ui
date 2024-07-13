@@ -5,20 +5,11 @@ import { faMagnifyingGlass, faBasketShopping, faAngleDown } from '@fortawesome/f
 import styles from './Header.module.scss';
 import images from '../../assets/images';
 import Button from '../../components/Button/Button';
+import config from '../../config';
+
 const cx = classNames.bind(styles);
 
 function Header() {
-    const products = [
-        {
-            id: 1,
-            name: 'Xiaomi Watch',
-        },
-        {
-            id: 2,
-            name: 'Apple Watch',
-        },
-    ];
-
     const handleSubNavItemClick = (e) => {
         e.stopPropagation();
     };
@@ -32,7 +23,7 @@ function Header() {
                             09xxxxxxxx
                         </Button>
                     </span>
-                    <Button to="/">
+                    <Button to={config.routes.home}>
                         <img className={cx('logo')} src={images.logo} alt="logo" />
                     </Button>
                     <span className={cx('action')}>
@@ -54,7 +45,7 @@ function Header() {
                             </div>
                         </Button>
                         <Button
-                            to="/cart"
+                            to={config.routes.cart}
                             className={cx('action-item')}
                             leftIcon={<FontAwesomeIcon icon={faBasketShopping} />}
                         >
@@ -65,7 +56,7 @@ function Header() {
                 </div>
                 <div className={cx('inner-bottom')}>
                     <nav className={cx('nav-list')}>
-                        <Button className={cx('nav-item')} to="/">
+                        <Button className={cx('nav-item')} to={config.routes.home}>
                             Trang chủ
                         </Button>
                         <Button
@@ -75,24 +66,33 @@ function Header() {
                         >
                             Sản phẩm
                             <div className={cx('sub-nav')}>
-                                {products.map((product) => {
-                                    return (
-                                        <Button
-                                            key={product.id}
-                                            onClick={handleSubNavItemClick}
-                                            href="https://facebook.com"
-                                            className={cx('sub-nav-item')}
-                                        >
-                                            {product.name}
-                                        </Button>
-                                    );
-                                })}
+                                <Button
+                                    onClick={handleSubNavItemClick}
+                                    href="https://facebook.com"
+                                    className={cx('sub-nav-item')}
+                                >
+                                    Xiaomi Watch
+                                </Button>
+                                <Button
+                                    onClick={handleSubNavItemClick}
+                                    href="https://facebook.com"
+                                    className={cx('sub-nav-item')}
+                                >
+                                    Apple Watch
+                                </Button>
+                                <Button
+                                    onClick={handleSubNavItemClick}
+                                    href="https://facebook.com"
+                                    className={cx('sub-nav-item')}
+                                >
+                                    Casio Watch
+                                </Button>
                             </div>
                         </Button>
-                        <Button className={cx('nav-item')} to="/news">
+                        <Button className={cx('nav-item')} to={config.routes.news}>
                             Tin tức
                         </Button>
-                        <Button className={cx('nav-item')} to="/contact">
+                        <Button className={cx('nav-item')} to={config.routes.contact}>
                             Liên hệ
                         </Button>
                     </nav>
