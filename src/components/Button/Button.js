@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -5,7 +6,7 @@ import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
-function Button({ to, href, onClick, children, leftIcon, rightIcon, className, ...passProps }) {
+const Button = ({ to, href, onClick, children, leftIcon, rightIcon, className, ...passProps }) => {
     let Comp = 'button';
     const props = {
         onClick,
@@ -31,7 +32,7 @@ function Button({ to, href, onClick, children, leftIcon, rightIcon, className, .
             {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
     );
-}
+};
 
 Button.propTypes = {
     children: PropTypes.node,

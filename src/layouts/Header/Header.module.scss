@@ -39,8 +39,10 @@
     position: relative;
     font-size: 1.5rem;
     font-weight: 500;
+    padding: 12px 0;
 
-    &:hover {
+    &:hover,
+    &.hover-action-item {
         color: var(--primary);
     }
 
@@ -56,23 +58,12 @@
     }
 }
 
-.action-item:hover .search {
-    display: block;
-}
-
 .search {
-    display: none;
-    position: absolute;
     width: 220px;
     height: 40px;
-    top: -65px;
-    left: -202px;
-    z-index: 99;
     border-radius: 5px;
     background-color: var(--white);
     border: 1px solid #000;
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in both;
 }
 
 .search-wrap {
@@ -122,46 +113,21 @@
 }
 
 .nav-item {
-    position: relative;
     font-weight: 700;
     padding: 12px 15px;
     color: #000;
     text-transform: uppercase;
 
-    &:hover {
+    &:hover,
+    &.hover-nav-item {
         color: var(--primary);
     }
 }
 
-.nav-item:hover .sub-nav {
-    display: block;
-    overflow: visible;
-    max-height: 3000px;
-    max-width: 3000px;
-    opacity: 1;
-    -webkit-transform: perspective(600px) rotateX(0deg);
-    -moz-transform: perspective(600px) rotateX(0deg);
-    -ms-transform: perspective(600px) rotateX(0deg);
-    -o-transform: perspective(600px) rotateX(0deg);
-    transform: perspective(600px) rotateX(0deg);
-    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end,
-        padding 0s step-end;
-    -o-transition: -o-transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end,
-        padding 0s step-end;
-    transition: transform 0.5s ease, opacity 0.2s ease, max-height 0s step-end, max-width 0s step-end,
-        padding 0s step-end;
-}
-
 .sub-nav {
-    display: none;
-    inherits: false;
-    position: absolute;
     width: 200px;
     padding: 0 10px;
     border-radius: 4px;
-    top: 45px;
-    left: 3px;
-    z-index: 999;
     border: 1px solid #ccc;
     background-color: var(--white);
 }
@@ -179,12 +145,4 @@
 
 .sub-nav-item ~ .sub-nav-item {
     border-top: 1px solid #e5e6ec;
-}
-
-// animations
-@keyframes fadeIn {
-    to {
-        top: -10px;
-        opacity: 1;
-    }
 }
