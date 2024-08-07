@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
 
 const cx = classNames.bind(styles);
-const Button = ({ to, href, onClick, children, leftIcon, rightIcon, className, ...passProps }) => {
+const Button = forwardRef(({ to, href, onClick, children, leftIcon, rightIcon, className, ...passProps }, ref) => {
     let Comp = 'button';
     const props = {
         onClick,
@@ -26,13 +26,13 @@ const Button = ({ to, href, onClick, children, leftIcon, rightIcon, className, .
     });
 
     return (
-        <Comp className={classes} {...props}>
+        <Comp ref={ref} className={classes} {...props}>
             {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
             <span className={cx('title')}>{children}</span>
             {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
     );
-};
+});
 
 Button.propTypes = {
     children: PropTypes.node,

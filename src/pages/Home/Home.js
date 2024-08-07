@@ -3,27 +3,36 @@ import styles from './Home.module.scss';
 
 // eslint-disable-next-line no-unused-vars
 import images from '../../assets/images';
-import Slide from '../../components/Slide';
+import { default as Slider } from '../../components/Slider';
 import ContentItem from '../../components/ContentItem';
-import * as settings from '../../components/Slide/settingsSlider';
+import * as settings from '../../components/Slider/settingsSlider';
 
 const cx = classNames.bind(styles);
 function Home() {
     return (
         <div className={cx('wrapper')}>
-            <Slide images={images.banner} settings={settings.settingsSimpleSlider} width="100%" height="475px" />
+            <Slider settings={settings.settingsSimpleSlider}>
+                {images.banner.map((item, index) => {
+                    return (
+                        <div key={index}>
+                            <img className={cx('banner-item')} src={item.url} alt={item.title} />
+                        </div>
+                    );
+                })}
+            </Slider>
             <ContentItem
                 title="Đối tác"
                 description="Bộ sưu tập những thương hiệu nổi tiếng về smartwatch trên thế giới"
             >
-                <Slide
-                    title="multiple"
-                    className={cx('slide-item-multiple')}
-                    images={images.partner}
-                    settings={settings.settingsMultipleItems}
-                    width="165px"
-                    height="50px"
-                />
+                <Slider settings={settings.settingsMultipleItems}>
+                    {images.partner.map((item, index) => {
+                        return (
+                            <div key={index}>
+                                <img className={cx('partner-item')} src={item.url} alt={item.title} />
+                            </div>
+                        );
+                    })}
+                </Slider>
             </ContentItem>
 
             <ContentItem
