@@ -5,6 +5,7 @@ import styles from './Home.module.scss';
 import images from '../../assets/images';
 import { default as Slider } from '../../components/Slider';
 import ContentItem from '../../components/ContentItem';
+import Category from '../../components/Category/Category';
 import * as settings from '../../components/Slider/settingsSlider';
 
 const cx = classNames.bind(styles);
@@ -25,14 +26,21 @@ function Home() {
                 description="Bộ sưu tập những thương hiệu nổi tiếng về smartwatch trên thế giới"
             >
                 <Slider settings={settings.settingsMultipleItems}>
-                    {images.partner.map((item, index) => {
-                        return (
-                            <div key={index}>
-                                <img className={cx('partner-item')} src={item.url} alt={item.title} />
-                            </div>
-                        );
-                    })}
+                    {images.partner.map((item, index) => (
+                        <div key={index} className={cx('partner-item')}>
+                            <img src={item.url} alt={item.title} />
+                        </div>
+                    ))}
                 </Slider>
+            </ContentItem>
+
+            <ContentItem
+                className="space"
+                title="Sản phẩm theo danh mục"
+                description="
+Những sản phẩm nổi tiếng với chất lượng hàng đầu được shop nhập về phục vụ quý khách hàng"
+            >
+                <Category />
             </ContentItem>
 
             <ContentItem
