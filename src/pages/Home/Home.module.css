@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+  background-color: var(--white);
+}
+
+.banner-item {
+  width: 100%;
+  height: 460px;
+}
+
+.space {
+  margin-bottom: 35px;
+}/*# sourceMappingURL=Home.module.css.map */

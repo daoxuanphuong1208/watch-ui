@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.inner {
+  width: var(--width-layout);
+}
+
+.title {
+  position: relative;
+  margin-bottom: 35px;
+}
+.title::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  top: 32px;
+  left: 0;
+  background: #ebebeb;
+}
+
+.large {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+  font-family: "FontTitle";
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--text-black);
+  text-transform: uppercase;
+  background: #fff;
+}
+
+.description {
+  margin: 5px auto 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #6e7874;
+}/*# sourceMappingURL=ContentItem.module.css.map */

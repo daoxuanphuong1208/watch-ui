@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+.wrapper img {
+  width: 60px;
+  height: 60px;
+}
+.wrapper:hover > img {
+  animation: hover-imageCatagory 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1;
+}
+
+.title {
+  margin-top: 5px;
+  font-size: 1.6rem;
+  color: #acb2b0;
+}
+
+.active {
+  color: var(--primary);
+}
+
+@keyframes hover-imageCatagory {
+  0% {
+    transform: perspective(200px) rotate3d(0, 1, 0, -90deg) translateX(-100%);
+  }
+  100% {
+    transform: perspective(200px) rotate3d(0, 1, 0, 0deg) translateX(0px);
+  }
+}/*# sourceMappingURL=ProductMini.module.css.map */

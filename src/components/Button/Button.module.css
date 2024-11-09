@@ -1,0 +1,11 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon + .title,
+.title + .icon {
+  margin-left: 4px;
+}/*# sourceMappingURL=Button.module.css.map */
